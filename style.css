@@ -51,9 +51,16 @@ div.nav {
     display: flex;
     list-style: none;
     justify-content: space-between;
+    text-align: center;
     margin: 0 0 0 auto;
     padding: 0;
     gap: 24px;
+}
+
+@media (max-width: 600px) {
+    .nav-links {
+        margin: 0;
+    }
 }
 
 /* Hero Section */
@@ -85,6 +92,24 @@ div.hero p {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 420px) {
+    div.hero {
+        flex-wrap: wrap-reverse;
+        text-align: center;
+    }
+
+    div.hero-gap {
+        min-width: 0;
+        width: 0;
+    }
+
+    .header-img-placeholder {
+        width: 90%;
+        height: 300px;
+    }
 }
 
 /* Info Section */
@@ -201,4 +226,5 @@ div.footer {
     height: 100px;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
