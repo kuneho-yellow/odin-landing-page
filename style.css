@@ -1,11 +1,9 @@
 body {
     background-color: #1f2937;
     color: #f9faf8;
-    display: flex;
-    flex-direction: column;
     font-family: roboto, Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 button {
@@ -17,20 +15,31 @@ button {
     font-size: 16px;
 }
 
-div.header,
-div.page-body,
-div.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0px 210px;
+a {
+    text-decoration: none;
 }
 
-div.nav {
-    align-self: stretch;
+.subtext {
+    font-size: 18px;
+    color: #e5e7eb;
+}
+
+div.nav,
+div.hero,
+div.footer {
     display: flex;
-    align-items: end;
-    height: 45px;
+    justify-content: center;
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+
+div.nav {
+    align-items: center;
+    flex-wrap: wrap;
+    height: 50px;
 }
 
 .nav-logo {
@@ -40,28 +49,23 @@ div.nav {
 
 .nav-links {
     display: flex;
-    margin: 0px;
-    padding: 0px;
-    margin-left: auto;
     list-style: none;
     justify-content: space-between;
+    margin: 0 0 0 auto;
+    padding: 0;
     gap: 24px;
 }
 
-.nav-links a {
-    text-decoration: none;
-}
-
-.subtext {
-    font-size: 18px;
-    color: #e5e7eb;
-}
+/* Hero Section */
 
 div.hero {
-    display: flex;
     align-items: stretch;
     padding: 130px 0px;
-    gap: 60px;
+}
+
+div.hero-gap {
+    min-width: 10px;
+    width: 100px;
 }
 
 .hero-text {
@@ -72,71 +76,96 @@ div.hero {
 }
 
 div.hero p {
-    margin: 8px 0px;
-}
-
-div.page-body {
-    background-color: #f9faf8;
-    color: #1f2937;
-    padding: 30px 0px 0px 0px;
+    margin: 8px 0;
 }
 
 .header-img-placeholder {
-    background-color: #6d747d;
     flex: 1 0 50%;
+    background-color: #6d747d;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.info-img {
+/* Info Section */
+
+div.info {
+    flex-direction: column;
+    background-color: #f9faf8;
+    color: #1f2937;
+    text-align: center;
+    padding: 20px 0 150px 0;
+}
+
+.info h2 {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.info-list {
     display: flex;
-    margin: 0px auto;
-    padding-bottom: 100px;
     list-style: none;
     justify-content: center;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
     gap: 50px;
-}
-
-.page-body h2 {
-    font-size: 36px;
-    font-weight: 800;
 }
 
 .info-img-placeholder {
     border: 4px #3882f6 solid;
     border-radius: 16px;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
 }
 
 .info-img-subtext {
-    width: 158px;
+    width: 168px;
     text-align: center;
     margin-top: 8px;
 }
 
+/* Quote Section */
+
 div.quote {
     background-color: #e5e7eb;
     color: #1f2937;
-    font-size: 36px;
-    font-weight: 300;
-    font-style: italic;
-    padding: 120px 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 0;
 }
 
 div.quote p {
-    margin: 0px;
-    padding: 0px;
+    width: 90%;
+    max-width:790px;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0;
 }
 
 div.quote-author {
+    width: 90%;
+    max-width:790px;
     font-size: 24px;
     font-weight: bold;
     font-style: normal;
     text-align: end;
 }
+
+/* Banner Section */
+
+div.banner-section {
+    display: flex;
+    justify-content: center;
+    background-color: #f9faf8;
+    color: #1f2937;
+    text-align: center;
+    padding: 100px 0 100px 0;
+}
+
 
 div.banner {
     background-color: #3882f6;
@@ -144,11 +173,13 @@ div.banner {
     border: none;
     border-radius: 8px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin: 100px 0px;
-    padding: 50px 100px;
-    gap: 200px;
+    text-align: left;
+    padding: 8px;
+    width: 90%;
+    height: 130px;
+    max-width: 1000px;
     font-size: 18px;
 }
 
@@ -157,16 +188,17 @@ button.banner-button {
 }
 
 .banner h3 {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .banner p {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 div.footer {
     height: 100px;
     justify-content: center;
+    align-items: center;
 }
